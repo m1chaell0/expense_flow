@@ -20,7 +20,8 @@
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app %>
     <%= vite_client_tag %>
-    <%= vite_javascript_tag 'application' %>
+    <%= vite_react_refresh_tag %>
+    <%= vite_javascript_tag 'main.tsx' %>
     <!--
       If using a TypeScript entrypoint file:
         vite_typescript_tag 'application'
@@ -34,6 +35,7 @@
   </head>
 
   <body>
+  <div id="root"></div>
     <%= yield %>
   </body>
 </html>
